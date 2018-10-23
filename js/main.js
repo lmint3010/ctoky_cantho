@@ -17,10 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
   var rightMonitorElement = document.querySelectorAll('.right-monitor');
   var centerMonitorElement = document.querySelectorAll('.center-monitor');
   var popupMonitorElement = document.querySelectorAll('.popup-monitor');
-  console.log(leftMonitorElement);
-  console.log(rightMonitorElement);
-  console.log(centerMonitorElement);
-  console.log(popupMonitorElement);
 
   // For Left Animations
   for(let i = 0; i < leftMonitorElement.length; i++) {
@@ -28,9 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let leftMonitorStatus = false;
     leftElementWatched.fullyEnterViewport(function() {
       leftMonitorElement[i].classList.add('left-in');
-    });
-    leftElementWatched.exitViewport(function() {
-      this.destroy();
     });
   }
 
@@ -41,9 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
     rightElementWatched.fullyEnterViewport(function() {
       rightMonitorElement[i].classList.add('right-in');
     });
-    rightElementWatched.exitViewport(function() {
-      this.destroy();
-    });
   }
 
   // For Popup Animation
@@ -53,9 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
     popupElementWatched.fullyEnterViewport(function() {
       popupMonitorElement[i].classList.add('popup');
     });
-    popupElementWatched.exitViewport(function() {
-      this.destroy();
-    });
   }
 
   // For Center Animation
@@ -64,9 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let centerMonitorStatus = false;
     centerElementWatched.fullyEnterViewport(function() {
       centerMonitorElement[i].classList.add('down-in');
-    });
-    centerElementWatched.exitViewport(function() {
-      this.destroy();
     });
   }
 
