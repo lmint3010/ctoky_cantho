@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
+
+/* Initialize CSS */
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 12px;
+  margin: 0;
+  padding: 0;
+  color: #5583B1;
+  line-height: 1.6rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+h2 {
+  font-size: 36px;
+  margin: 20px 0;
+}
+
+a {
+  position: relative;
+  z-index: 999;
+  display: block;
+  text-decoration: none;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: #4285f4;
+  color: white;
+  font-size: 20px;
+  transition: 140ms ease-out;
+}
+
+.button:hover {
+  background-color: dodgerblue;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .3);
+}
+
+/* Custom CSS */
+
+nav {
+  padding: .4rem 1rem;
+  position: fixed;
+  background-color: white;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 9999;
+}
+
+section {
+  grid-column: span 12;
+}
+
+nav .logo {
+  font-size: 26px;
+  color: #4285f4;
+  font-weight: 600;
+  flex-grow: 1;
+  margin-left: 1rem;
+}
+
+nav .left-menu {
+  color: #5583B1;
+}
+
+nav .left-menu-content {
+  font-size: 18px;
+}
+
+nav .menu-button {
+  margin: 0 1rem;
+  border-radius: 4rem;
+  font-weight: 600;
+  padding: 2px 12px;
+  font-size: 17px;
+}
+
+.welcome {
+  padding: 3rem 1rem;
+  padding-top: 6rem;
+  display: flex;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 100;
+}
+
+.welcome .main-image {
+  width: 45%;
+}
+
+.content {
+  flex-grow: 1;
+  margin-left: 1rem;
+}
+
+.welcome-button {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-top: .2rem;
+}
+
+.info .container {
+  padding: 4rem 1rem;
+}
+
+.info .container .content {
+  width: 40%;
+  text-align: center;
+}
+
+.info p {
+  padding: 0 4rem;
+}
+
+.info .container img {
+  width: 46%;
+}
+
+.info.inverse img {
+  order: -1;
+}
+
+.team {
+  background: url('img/wavebackground.svg');
+  background-attachment: fixed;
+  background-size: cover;
+  padding-bottom: 3rem;
+}
+
+.team h2 {
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  left: 50%;
+  margin-bottom: 120px;
+  transform: translateX(-50%);
+}
+
+.team h2:before {
+  content: '';
+  position: absolute;
+  background: url('img/bubble.svg') no-repeat;
+  background-size: cover;
+  width: 200px;
+  height: 142px;
+  top: -150%;
+  left: -40%;
+  z-index: -1;
+  opacity: .7;
+}
+
+.founder {
+  display: flex;
+  justify-content: center;
+  padding: 0 20%;
+  text-align: center;
+}
+
+.team .detail {
+  font-size: 20px;
+}
+
+.supporter {
+  margin: 120px 0;
+}
+
+.supporter .member {
+  display: flex;
+  padding: 0 20%;
+  align-items: center;
+}
+
+.team .supporter .avatar {
+  margin-bottom: 0;
+}
+
+.supporter .member .detail {
+  max-width: 70%;
+  margin-left: auto;
+}
+
+.supporter.inverse .detail {
+  order: -1;
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.member .avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.member .avatar img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, .3);
+}
+
+.member h4 {
+  margin-bottom: 0;
+}
+
+.final {
+  text-align: center;
+  padding: 0 25%;
+  margin-bottom: 4rem;
+}
+
+.final .content {
+  margin: 2rem 0;
+}
+
+#author {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: rgba(255, 99, 71, 0.235);
+  font-size: 16px;
+}
+
+/* Parallax Element */
+
+.parallax {
+  position: absolute;
+}
+
+.parallax-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.welcome-bubble-one {
+  width: 120px;
+  top: 13%;
+  left: 22%;
+}
+
+.welcome-bubble-two {
+  width: 100px;
+  top: 30%;
+  left: 60%;
+}
+
+.welcome-bubble-three {
+  width: 70px;
+  top: 28%;
+  left: 38%;
+}
+
+.wave {
+  position: relative;
+}
+
+.top-wave {
+  position: absolute;
+  top: -120px;
+  left: 0;
+}
+
+.bottom-wave {
+  position: absolute;
+  bottom: -180px;
+  transform: rotateZ(180deg);
+}
+
+/* Responsive break point */
+@media (min-width: 768px) {
+  p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  #author {
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 99, 71, 0.621);
+  }
+
+  .p-hide {
+    display: none;
+  }
+
+  nav {
+    padding: .8rem .2rem;
+  }
+
+  nav .button, .button {
+    font-size: 14px;
+  }
+
+  nav .logo {
+    font-size: 22px;
+  }
+
+  section {
+    flex-direction: column;
+  }
+
+  section h2 {
+    font-size: 22px;
+  }
+
+  p {
+    margin: 4px 0;
+    font-size: 14px;
+  }
+
+  section .flex {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .info .container .content {
+    width: 100%;
+    margin: 0;
+  }
+
+  .info .container .content p {
+    padding: 0 14%;
+  }
+
+  .welcome {
+    text-align: center;
+    padding: 4rem .4rem;
+  }
+
+  .welcome-button {
+    margin-top: 1rem;
+  }
+
+  .welcome .main-image, section .content-image, .info .container img {
+    width: 80%;
+    margin-top: 1rem;
+  }
+
+  .welcome .content {
+    margin: 0;
+  }
+
+  .top-wave {
+    top: -85px;
+  }
+
+  .bottom-wave {
+    bottom: -85px;
+  }
+
+  .team h2:before {
+    width: 120px;
+    height: 85px;
+  }
+
+  .founder {
+    padding: 10%;
+  }
+
+  .team .detail {
+    font-size: 16px;
+  }
+
+  .supporter .member {
+    padding: 0 10%;
+  }
+
+  .team h4 {
+    margin: .2rem 0;
+  }
+
+  .welcome-bubble-one {
+    width: 100px;
+    left: 50px;
+  }
+}
+
+@media (max-width: 556px) {
+  .top-wave {
+    top: -50px;
+  }
+
+  .bottom-wave {
+    bottom: -50px;
+  }
+
+  .info .container .content p {
+    padding: 0;
+  }
+
+  .founder {
+    padding: 4%;
+  }
+
+  .member .avatar {
+    margin: 0;
+  }
+
+  .team .detail {
+    text-align: center;
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .supporter .member {
+    padding: 0 5%;
+    flex-direction: column;
+  }
+
+  .supporter .member .detail {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .team h4 {
+    margin: .2rem 0;
+  }
+
+  .supporter.inverse .detail {
+    order: 1;
+  }
+
+  .final {
+    padding: 0 5%;
+  }
+
+  .final .button {
+    margin-top: 0;
+  }
+
+  .welcome-bubble-one {
+    width: 100px;
+    left: 10px;
+  }
+  
+  .welcome-bubble-two {
+    width: 80px;
+  }
+  
+  .welcome-bubble-three {
+    width: 50px;
+  }
+}
+
+/* Animation Frames */
+
+.left-monitor, .center-monitor, .right-monitor {
+  opacity: 0;
+}
+
+.popup-monitor {
+  transform: scale(0);
+}
+
+.left-in {
+  animation: flyIn 500ms forwards;
+  animation-delay: 120ms;
+}
+
+.down-in {
+  animation: downIn 500ms forwards;
+  animation-delay: 120ms;
+}
+
+.right-in {
+  animation: rightIn 500ms forwards;
+  animation-delay: 120ms;
+}
+
+.popup {
+  animation: popUp 500ms forwards;
+  animation-delay: 80ms;
+}
+
+@keyframes flyIn {
+  from {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes downIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rightIn {
+  from {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes popUp {
+  0% {
+    transform: scale(0);
+  }
+
+  40% {
+    transform: scale(1.16);
+  }
+
+  55% {
+    transform: scale(.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
