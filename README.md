@@ -2,4 +2,4 @@
 Nhóm học lập trình miễn phí !!
 
 ## Website:
-https://github.com/lmint3010/coders-tokyo-cantho
+https://lmint3010.github.io/coders-tokyo-cantho/
